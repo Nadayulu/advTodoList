@@ -6,7 +6,9 @@ const Todo = require('../../mongoDB');
 const todoController = {
     saveTodoList: function(req, res) {
         let todo = new Todo();
-        todo.name = req.body.name;
+        todo.todoEntry = req.body.todoEntry;
+        todo.tag = req.body.tag;
+        todo.status = req.body.status;
         todo.save(function(err) {
             if (err)
               res.send("could not save the data", err)
