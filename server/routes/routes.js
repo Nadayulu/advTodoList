@@ -5,7 +5,7 @@ const router = express.Router();
 router.route('/save')
   .post(todoController.saveTodoList)
 
-router.route('/load')
+router.route('/loadAll')
   .get(todoController.getAllTodos)
 
 module.exports = router;
